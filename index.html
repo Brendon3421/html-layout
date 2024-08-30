@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Layout with Columns and Blog</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px 20px;
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        .modulos {
+            display: flex;
+            gap: 15px;
+        }
+
+        .modulos a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #555;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .modulos a:hover {
+            background-color: #666;
+        }
+
+        .drop-menu button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .drop-menu button:hover {
+            background-color: #666;
+        }
+
+        .column {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .blog {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .blog .post {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            position: relative;
+            grid-column: 1 / -1;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Modern Header</h1>
+    </header>
+
+    <nav>
+        <div class="logo">
+            <span>Your Logo</span>
+        </div>
+        <div class="modulos">
+            <a href="#">Module 1</a>
+            <a href="#">Module 2</a>
+            <a href="#">Module 3</a>
+            <div class="drop-menu">
+                <button>Dropdown</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="column">
+        <h2>Left Column</h2>
+        <p>Content for the left column goes here.</p>
+    </div>
+
+    <div class="column">
+        <h2>Main Content</h2>
+        <p>This is the main content area.</p>
+        <div class="blog">
+            <div class="post">
+                <h3>Blog Post 1</h3>
+                <p>Brief description of blog post 1.</p>
+            </div>
+            <div class="post">
+                <h3>Blog Post 2</h3>
+                <p>Brief description of blog post 2.</p>
+            </div>
+            <div class="post">
+                <h3>Blog Post 3</h3>
+                <p>Brief description of blog post 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>This is the footer section.</p>
+    </footer>
+</body>
+
+</html>
